@@ -205,8 +205,7 @@ def plt_normals(footPC,norms):
 
 # Read in files
 # only read .asc files for this work
-#fPath = 'C:\\Users\\eric.honert\\Boa Technology Inc\\PFL Team - General\\Aetrex Object Files\\python_files\\' --> original boa
-fpath = 'C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Projects\\Aetrex Object Files'
+fPath = 'C:\\Users\\eric.honert\\Boa Technology Inc\\PFL Team - General\\Aetrex Object Files\\python_files\\'
 fileExt = r".npy"
 entries = [fName for fName in os.listdir(fPath) if fName.endswith(fileExt)]
 
