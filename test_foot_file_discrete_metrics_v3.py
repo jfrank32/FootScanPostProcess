@@ -206,12 +206,12 @@ def plt_normals(footPC,norms):
 # Read in files
 # only read .asc files for this work
 #fPath = 'C:\\Users\\eric.honert\\Boa Technology Inc\\PFL Team - General\\Aetrex Object Files\\python_files\\' --> original boa
-fpath = 'C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Projects\\Aetrex Object Files'
-fileExt = r".npy"
+fPath = 'C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Projects\\Aetrex Object Files\\python_files\\'
+fileExt = r".npy" #".npy"
 entries = [fName for fName in os.listdir(fPath) if fName.endswith(fileExt)]
 
 # Toggle to save
-save_on = 0
+save_on = 1
 
 # Preallocate variables
 store_FL = []
@@ -241,7 +241,7 @@ for ii in range(len(entries)):
         # Find unique normals
         u_norms = np.array([np.mean(normals[np.where((val[0] == normals[:,3]) & (val[1] == normals[:,4]) & (val[2] == normals[:,5]))],axis=0) for val in point_cloud])
         u_norms = u_norms[:,0:3]
-        
+        #import pdb; pdb.set_trace()
         # Make all of the feet right feet
         if entries[ii].find('Left') > 0:
             point_cloud[:,0] = -1*point_cloud[:,0]
@@ -365,7 +365,8 @@ outcomes = pd.DataFrame({ 'Name_Side':list(store_fname),
         
 
 if save_on == 1:         
-    outcomes.to_csv('C:\\Users\\eric.honert\\Boa Technology Inc\\PFL Team - General\\Aetrex Object Files\\python_files\\SummaryMetrics.csv',mode='a',header=True)    
+    #outcomes.to_csv('C:\\Users\\eric.honert\\Boa Technology Inc\\PFL Team - General\\Aetrex Object Files\\python_files\\SummaryMetrics.csv',mode='a',header=True)    
+    outcomes.to_csv('C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Projects\\Aetrex Object Files\\python_files\\SummaryMetrics.csv',mode='a',header=True)
 
 
 # Visualize the point cloud:
