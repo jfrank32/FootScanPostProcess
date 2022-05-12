@@ -206,7 +206,7 @@ def plt_normals(footPC,norms):
 # Read in files
 # only read .asc files for this work
 #fPath = 'C:\\Users\\eric.honert\\Boa Technology Inc\\PFL Team - General\\Aetrex Object Files\\python_files\\' --> original boa
-fPath = 'C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Projects\\Aetrex Object Files\\python_files\\'
+fPath = 'C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Aetrex OBJ Files\\python_files\\'
 fileExt = r".npy" #".npy"
 entries = [fName for fName in os.listdir(fPath) if fName.endswith(fileExt)]
 
@@ -365,7 +365,7 @@ outcomes = pd.DataFrame({ 'Name_Side':list(store_fname),
 
 if save_on == 1:         
     #outcomes.to_csv('C:\\Users\\eric.honert\\Boa Technology Inc\\PFL Team - General\\Aetrex Object Files\\python_files\\SummaryMetrics.csv',mode='a',header=True)    
-    outcomes.to_csv('C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Projects\\Aetrex Object Files\\python_files\\SummaryMetrics.csv',mode='a',header=True)
+    outcomes.to_csv('C:\\Users\\Jesse Frank\\OneDrive - Specialized Bicycle Components\\Body Geometry team\\Aetrex OBJ Files\\python_files\\SummaryMetrics.csv',mode='a',header=True)
 
 
 # Visualize the point cloud:
