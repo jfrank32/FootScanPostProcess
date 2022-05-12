@@ -241,7 +241,6 @@ for ii in range(len(entries)):
         # Find unique normals
         u_norms = np.array([np.mean(normals[np.where((val[0] == normals[:,3]) & (val[1] == normals[:,4]) & (val[2] == normals[:,5]))],axis=0) for val in point_cloud])
         u_norms = u_norms[:,0:3]
-        #import pdb; pdb.set_trace()
         # Make all of the feet right feet
         if entries[ii].find('Left') > 0:
             point_cloud[:,0] = -1*point_cloud[:,0]
